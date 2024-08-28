@@ -1,0 +1,28 @@
+### JupyterNotebooks ###
+.ipynb_checkpoints
+*/.ipynb_checkpoints/**
+
+# IPython
+profile_default/
+ipython_config.py
+
+### R ###
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+.RDataTmp
+
+# User-specific files
+.Ruserdata
+.lintr
+
+# R Environment Variables
+.Renviron
+
+### Pipeline ###
+# Ignore all directories created by the pipeline
+**/data/**/raw/**
+**/results/**
