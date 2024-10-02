@@ -71,3 +71,26 @@ setMethod(
     )
   }
 )
+
+setGeneric(
+  name = "printKEGG",
+  def = function(.Object, ...) {
+    standardGeneric("printKEGG")
+  }
+)
+
+setMethod(
+  f = "printKEGG",
+  signature = "KeggAnalysisCombined",
+  definition = function(.Object, directory = "./", regulation, treatment, control, node_name = "Combined", node_slug = "combined") {
+    print_kegg(
+      .Object@enrichment,
+      directory,
+      regulation,
+      treatment,
+      control,
+      node_name,
+      node_slug
+    )
+  }
+)

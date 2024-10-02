@@ -77,3 +77,27 @@ setMethod(
     )
   }
 )
+
+setGeneric(
+  name = "printGO",
+  def = function(.Object, ...) {
+    standardGeneric("printGO")
+  }
+)
+
+setMethod(
+  f = "printGO",
+  signature = "GoAnalysisCombined",
+  definition = function(.Object, directory = "./", ontology = "bp", regulation, treatment, control, node_name = "Combined", node_slug = "combined") {
+    print_go(
+      .Object@enrichment,
+      directory,
+      ontology,
+      regulation,
+      treatment,
+      control,
+      node_name,
+      node_slug
+    )
+  }
+)

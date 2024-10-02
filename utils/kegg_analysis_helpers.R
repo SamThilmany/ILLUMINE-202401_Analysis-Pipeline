@@ -67,3 +67,26 @@ plot_kegg <- function(enrichment, directory = "./", regulation, treatment, contr
 
   create_plot(cnetplot, "cnetplot", showCategory = 10, font.size = default_font_size, cex.params = list(gene_label = 0.5, category_label = 0.75))
 }
+
+# Helper function to print KEGG results to a .csv file
+print_kegg <- function(enrichment, directory = "./", regulation, treatment, control, node_name, node_slug) {
+  enrichment <- as.data.frame(enrichment)
+
+  if (nrow(enrichment) > 0) {
+    enrichment <- enrichment %>%
+      arrange(p.adjust) %>%
+      slice_head(n = 30)
+
+
+    display(enrichment)
+
+    write.csv(
+      enrichment,
+      file.path(
+        directory,
+        sprintf("kegg_enrichment_table_%s-vs-%s_%s_%s.csv", treatment, control, regulation, node_slug)
+      ),
+      row.names = FALSE
+    )
+  }
+}
