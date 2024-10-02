@@ -10,6 +10,7 @@ source("../utils/renamer.R")
 prepare_gene_list <- function(ratio_df_consistent, ratio) {
   regulated_gene_list <- ratio_df_consistent %>%
     filter(Comparison == ratio) %>%
+    arrange(desc(Abs.log2.Ratio)) %>%
     pull(Gene.Symbol) %>%
     na.omit(Gene.Symbol) %>%
     unique()
@@ -21,6 +22,9 @@ prepare_gene_list <- function(ratio_df_consistent, ratio) {
 
 # Helper function to perform DISGENET enrichment
 get_disgenet_enrichment <- function(regulated_gene_list) {
+  # The number of genes for a GDA analysis is limited to 100
+  regulated_gene_list <- head(regulated_gene_list, n = 100)
+
   disgenet_enrichment <- disgenet2r::gene2disease(
     gene = regulated_gene_list,
     vocabulary = "HGNC",
