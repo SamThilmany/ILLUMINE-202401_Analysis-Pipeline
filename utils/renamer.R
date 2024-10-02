@@ -64,3 +64,19 @@ abundance_group_column_renamer <- function(column_name) {
     condition_renamer(matches[3], output = "slug")
   )
 }
+
+# Rename found confidence columns
+found_group_column_renamer <- function(column_name) {
+  regex <- "Found\\.in\\.Sample\\.Group\\.{2}(.+)"
+
+  matches <- stringr::str_match(column_name, regex)
+
+  if (is.na(matches[1]) || is.na(matches[2])) {
+    return(column_name)
+  }
+
+  new_name <- sprintf(
+    "found_in_%s",
+    condition_renamer(matches[2], output = "slug")
+  )
+}

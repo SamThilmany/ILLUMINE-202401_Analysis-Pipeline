@@ -13,14 +13,16 @@ preprocess_protein_df <- function(df) {
       matches("^Entrez"),
       matches("Grouped..CV"),
       matches("Ratio..log2"),
-      matches("Ratio.Adj..P.Value")
+      matches("Ratio.Adj..P.Value"),
+      matches("Sample.Group")
     ) %>%
     setNames(c(
       "Accession",
       "Gene.Symbol",
       "Entrez.Gene.ID",
-      sapply(colnames(.)[grep("Group", colnames(.))], abundance_group_column_renamer),
-      sapply(colnames(.)[grep("Ratio", colnames(.))], abundance_ratio_column_renamer)
+      sapply(colnames(.)[grep("CV", colnames(.))], abundance_group_column_renamer),
+      sapply(colnames(.)[grep("log2|P.Value", colnames(.))], abundance_ratio_column_renamer),
+      sapply(colnames(.)[grep("Sample.Group", colnames(.))], found_group_column_renamer)
     )) %>%
     filter(
       !stringr::str_detect(Gene.Symbol, "KRT")
@@ -162,9 +164,21 @@ preprocess_ms2_df <- function(df, add_tech_repl = FALSE, add_fraction = FALSE) {
 }
 
 # Helper function to filter a protein data frame for features quantified in every sample group
-filter_for_quantified_features <- function(protein_df) {
+filter_for_quantified_features <- function(protein_df, df_name) {
+  protein_no_start <- nrow(protein_df)
+
   protein_df <- protein_df %>%
-    filter(complete.cases(select(., matches("log2|pValue"))))
+    filter(if_all(matches("log2|pValue"), ~ !is.na(.)))
+
+  protein_no_not_na <- nrow(protein_df)
+
+  protein_df <- protein_df %>%
+    filter(if_all(matches("found_in"), ~ grepl("High", .)))
+
+  protein_no_confidence_high <- nrow(protein_df)
+
+  # \033[1m and \033[0m are the ANSI codes to start and end bold formatting
+  cat(sprintf("\033[1m%s:\033[0m Of the initial %s proteins, %s were filtered out due to missing values, and %s additional proteins were filtered out due to low confidence. This resulted in %s remaining proteins.", df_name, protein_no_start, (protein_no_start - protein_no_not_na), (protein_no_not_na - protein_no_confidence_high), protein_no_confidence_high), fill = TRUE)
 
   return(protein_df)
 }

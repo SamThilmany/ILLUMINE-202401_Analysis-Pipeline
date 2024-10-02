@@ -16,7 +16,7 @@ get_ratio_df <- function(df, quan_method, node_name, gda_accession_list) {
   for (ratio in ratios) {
     ratio_df_list[[ratio]] <- df %>%
       select(
-        -matches("log2_|pValue_|cv_"),
+        -matches("log2_|pValue_|cv_|found_in_"),
         all_of(c(
           paste0("log2_", ratio),
           paste0("pValue_", ratio)

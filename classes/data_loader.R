@@ -159,8 +159,8 @@ setMethod(
     .Object@lfqChimerys_proteins <- preprocess_protein_df(.Object@lfqChimerys_proteins)
     .Object@lfqSequestHT_proteins <- preprocess_protein_df(.Object@lfqSequestHT_proteins)
 
-    .Object@lfqChimerys_proteins_complete <- filter_for_quantified_features(.Object@lfqChimerys_proteins)
-    .Object@lfqSequestHT_proteins_complete <- filter_for_quantified_features(.Object@lfqSequestHT_proteins)
+    .Object@lfqChimerys_proteins_complete <- filter_for_quantified_features(.Object@lfqChimerys_proteins, "LFQ Chimerys")
+    .Object@lfqSequestHT_proteins_complete <- filter_for_quantified_features(.Object@lfqSequestHT_proteins, "LFQ SequestHT")
 
     .Object@lfqChimerys_peptides <- preprocess_peptide_df(.Object@lfqChimerys_peptides)
     .Object@lfqSequestHT_peptides <- preprocess_peptide_df(.Object@lfqSequestHT_peptides)
@@ -174,8 +174,8 @@ setMethod(
     .Object@lbqChimerys_proteins <- preprocess_protein_df(.Object@lbqChimerys_proteins)
     .Object@lbqSequestHT_proteins <- preprocess_protein_df(.Object@lbqSequestHT_proteins)
 
-    .Object@lbqChimerys_proteins_complete <- filter_for_quantified_features(.Object@lbqChimerys_proteins)
-    .Object@lbqSequestHT_proteins_complete <- filter_for_quantified_features(.Object@lbqSequestHT_proteins)
+    .Object@lbqChimerys_proteins_complete <- filter_for_quantified_features(.Object@lbqChimerys_proteins, "LBQ Chimerys")
+    .Object@lbqSequestHT_proteins_complete <- filter_for_quantified_features(.Object@lbqSequestHT_proteins, "LBQ SequestHT")
 
     .Object@lbqChimerys_peptides <- preprocess_peptide_df(.Object@lbqChimerys_peptides)
     .Object@lbqSequestHT_peptides <- preprocess_peptide_df(.Object@lbqSequestHT_peptides)
