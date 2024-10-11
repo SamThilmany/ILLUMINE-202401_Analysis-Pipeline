@@ -78,7 +78,9 @@ plot_disease_classes <- function(enrichment_df, treatment, control) {
       Shortened.Class.Name = shorten_disease_name(Class.Name, 20),
       Color = ifelse(str_detect(Class.Name, "\\(F03\\)$"), "highlight", "normal") # MeSH F04: Mental Disorders
     ) %>%
-    drop_na()
+    drop_na() %>%
+    arrange(desc(Freq)) %>%
+    slice_head(n = 13)
 
   df$Shortened.Class.Name <- factor(df$Shortened.Class.Name, levels = df$Shortened.Class.Name[order(df$Freq)])
 
@@ -86,13 +88,16 @@ plot_disease_classes <- function(enrichment_df, treatment, control) {
     geom_bar(stat = "identity") +
     coord_flip() +
     labs(
-      title = sprintf("Disease Classes (%s vs. %s)", condition_renamer(treatment), condition_renamer(control)),
+      title = sprintf("%s vs. %s", condition_renamer(treatment), condition_renamer(control)),
       x = "",
       y = "Number of GDAs"
     ) +
     theme(
       legend.position = "none",
-      axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+      axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+      panel.grid.major.y = element_blank(),
+      panel.grid.major.x = element_line(linewidth = 0.4, color = "#231f2050"),
+      panel.grid.minor.x = element_line(linewidth = 0.2, color = "#231f2030")
     )
 
   return(plot)
