@@ -73,12 +73,6 @@ plot_go <- function(enrichment, directory = "./", ontology = "bp", regulation, t
 print_go <- function(enrichment, directory = "./", ontology = "bp", regulation, treatment, control, node_name, node_slug) {
   enrichment <- as.data.frame(enrichment)
 
-  regulation_label <- if (regulation == "both") {
-    "Up- and down-regulated"
-  } else {
-    sprintf("%s-regulated", str_to_title(regulation))
-  }
-
   if (nrow(enrichment) > 0) {
     enrichment <- enrichment %>%
       filter(ONTOLOGY == "BP") %>%
