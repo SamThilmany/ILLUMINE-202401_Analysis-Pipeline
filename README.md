@@ -5,7 +5,7 @@
         <img src="https://img.shields.io/badge/Submitted in:-Proteomics_--_Clinical_Applications-blue" alt="Submitted in Proteomics - Clinical Applications" />
     </p>
     <p>
-        <img src="https://img.shields.io/badge/Submitted:-pending-blue" alt="Submission pending" />
+        <img src="https://img.shields.io/badge/Submitted:-11.10.2014-blue" alt="Submission: 11.10.2024" />
         <img src="https://img.shields.io/badge/Revised:-pending-orange" alt="Revision pending" />
         <img src="https://img.shields.io/badge/Accepted:-pending-green" alt="Acceptance pending" />
     </p>
@@ -48,15 +48,15 @@ In this experiment, the neural progenitor cell line ReNcell VM was cultured in a
 
 One batch of cells was incubated with cell culture medium with added 100&nbsp;ppm DMSO and another batch was incubated with only cell culture medium. These cell cultures served as controls in the data analysis.
 
-The cell culture medium was exchanged every other day and the cells were split at approx 90&nbsp;% confluency. After 14 days, the cells were harvested and split into aliquots of $1 \times 10^6$ cells and stored at -80&nbsp;°C.
+The cell culture medium was exchanged every other day, and the cells were split at approx 90&nbsp;% confluency. After 14 days, the cells were harvested, split into aliquots of $1 \times 10^6$ cells, and stored at -80&nbsp;°C.
 
 <p align="right">(<a href="#table-of-contents">back to top</a>)</p>
 
 ### Sample Preparation
 
-One aliquot of each sample was processed for label-based quantification (LBQ) using isobaric mass tags (TMTpro 16plex) whereas another aliquot of each sample was processed for label-free quantification (LFQ).
+One aliquot of each sample was processed for label-based quantification (LBQ) using isobaric mass tags (TMTpro 16plex), whereas another aliquot of each sample was processed for label-free quantification (LFQ).
 
-In either case, the proteins were digested, reduced and alkylated for bottom-up proteomics
+In either case, the proteins were digested, reduced, and alkylated for bottom-up proteomics.
 
 In the case of label-based quantification, the pooled sample was pre-fractionated at high pH into 8 fractions.
 
@@ -74,7 +74,7 @@ The LBQ samples were analyzed using a Thermo Scientific Q Exactive mass spectrom
 
 The mass spectrometer's raw data was processed with Thermo Scientific Proteome Discoverer 3.0 (LBQ) and 3.1 (LFQ), using the Sequest HT and CHIMERYS search engines. The "Proteins", "Peptide Groups", "PSMs" and "MS/MS Spectrum Info" tables were exported as text files and further analyzed and visualized by the analysis pipeline in this repository. The data analysis involved multiple stages:
 1. A technical evaluation was conducted for the LFQ and LBQ data to assess their quality.
-2. A biological evaluation of the regulated proteins was performed, including the search for gene-to-disease associations and enrichment analyses for GO (Gene Ontology) terms and KEGG (Kyoto Encyclopedia of Genes and Genomes) pathways.
+2. The regulated proteins were biologically evaluated, including the search for gene-to-disease associations and enrichment analyses for GO (Gene Ontology) terms and KEGG (Kyoto Encyclopedia of Genes and Genomes) pathways.
 3. The regulated proteins from all data sets were combined to obtain a more comprehensive view, and this combined data set was also subjected to biological analysis.
 
 <p align="right">(<a href="#table-of-contents">back to top</a>)</p>
@@ -86,9 +86,9 @@ The mass spectrometer's raw data was processed with Thermo Scientific Proteome D
 
 ## General Remarks on the Repository
 
-The code is organized with object-oriented programming principles in mind. In the `classes/` directory you will find separate R files with S4 classes for a specific assessment, *e.g.*, the assessment of the AGC's fill percentage (`agc_fill.R`). To keep the code of these classes readable, the classes do not contain any code that manipulates data but only call functions responsible for those tasks. These functions can be found in the `utils/` directory with the `_helpers` suffix, *e.g.*, `agc_fill_helpers.R`.
+The code is organized with object-oriented programming principles in mind. In the `classes/` directory, you will find separate R files with S4 classes for a specific assessment, *e.g.*, the assessment of the AGC's fill percentage (`agc_fill.R`). To keep the code of these classes readable, the classes do not contain any code that manipulates data but only call functions responsible for those tasks. These functions can be found in the `utils/` directory with the `_helpers` suffix, *e.g.*, `agc_fill_helpers.R`.
 
-Finally, the `notebooks/` directory contains three Jupyter Notebooks that combine all the necessary steps for data analysis and visualization. The resulting files and images are saved in the `results/` directory.
+Finally, the `notebooks/` directory contains three Jupyter Notebooks that combine all the necessary data analysis and visualization steps. The resulting files and images are saved in the `results/` directory.
 
 <p align="right">(<a href="#table-of-contents">back to top</a>)</p>
 
@@ -96,7 +96,7 @@ Finally, the `notebooks/` directory contains three Jupyter Notebooks that combin
 
 To execute the pipeline yourself, follow these steps:
 
-**Setup:** Ensure you have JupyterLab with an R kernel installed. For simplicity and to avoid compatibility issues, you can use [my Docker container](https://github.com/SamThilmany/JupyterLab-with-R--Docker-Environment).
+**Setup:** Ensure you have installed JupyterLab with an R kernel. For simplicity and to avoid compatibility issues, you can use [my Docker container](https://github.com/SamThilmany/JupyterLab-with-R--Docker-Environment).
 
 **Prepare the Code:** Download the code from this repository. Rename the folder (e.g., to `thilmany-etal`) and move it into the `notebooks/` directory of your JupyterLab Docker environment.
 
