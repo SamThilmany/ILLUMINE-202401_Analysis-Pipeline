@@ -59,7 +59,7 @@ read_ms2_agc_fill <- function(ms2_scan_chunks, data_raw_list) {
 
   # Parallel processing of each scan
   results <- foreach(group = seq_len(nrow(flat_chunks_grouped)), .combine = rbind, .packages = c("rawrr", "dplyr")) %dopar% {
-    file <- flat_chunks_grouped$File[group]
+    file <- flat_chunks_grouped$File[[group]]
     scan_list <- flat_chunks_grouped$Scans[[group]]
     scan_chunks <- split(scan_list, ceiling(seq_along(scan_list) / chunk_size))
 
