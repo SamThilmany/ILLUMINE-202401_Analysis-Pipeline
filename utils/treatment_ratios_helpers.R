@@ -92,8 +92,8 @@ plot_volcano <- function(df, treatment, control, node_name, show_labels = FALSE,
   labels <- if (match_gene_list) df$Diff.Expressed.Label.Accession.List else df$Diff.Expressed.Label
 
   plot <- ggplot(df, aes(x = log2.Ratio, y = Neg.log10.p.Value, col = df$Diff.Expressed, label = labels)) +
-    geom_vline(xintercept = c(-log2_fc_threshold, log2_fc_threshold), col = "gray", linetype = "dashed") +
-    geom_hline(yintercept = -log10(p_value_threshold), col = "gray", linetype = "dashed") +
+    geom_vline(xintercept = c(-log2_fc_threshold, log2_fc_threshold), col = "#231f2050", linetype = "dashed") +
+    geom_hline(yintercept = -log10(p_value_threshold), col = "#231f2050", linetype = "dashed") +
     geom_point(size = 1, alpha = 0.5) +
     scale_color_manual(
       values = c(

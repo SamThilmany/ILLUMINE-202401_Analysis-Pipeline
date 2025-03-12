@@ -8,11 +8,11 @@ detected_cores <- parallel::detectCores()
 default_cores <- if (detected_cores > 1) detected_cores - 1 else 1
 
 # Graphics
-default_dpi <- 1200
-default_width <- 170 / 2
-default_height <- default_width / 1.2
+default_dpi <- 600
+default_width <- 111
+default_height <- 90
 default_unit <- "mm"
-default_font_size <- 9
+default_font_size <- 16
 default_color <- "#231F20"
 default_font_family <- "Roboto"
 showtext_opts(dpi = default_dpi)

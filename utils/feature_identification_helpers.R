@@ -48,7 +48,11 @@ plot_features <- function(df) {
       y = "N° Proteins"
     ) +
     theme(
-      legend.position = "none"
+      legend.position = "none",
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor.x = element_blank(),
+      panel.grid.major.y = element_line(linewidth = 0.4, color = "#231f2050"),
+      panel.grid.minor.y = element_line(linewidth = 0.2, color = "#231f2030"),
     )
 
   return(plot)
