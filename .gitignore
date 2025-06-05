@@ -24,6 +24,6 @@ ipython_config.py
 
 ### Pipeline ###
 # Ignore all directories created by the pipeline
-**/data/**/raw/**
-!**/data/**/raw/.gitkeep 
+**/graphs/**
 **/results/**
+**/logs/**
