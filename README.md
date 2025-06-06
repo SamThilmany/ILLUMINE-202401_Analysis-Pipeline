@@ -102,8 +102,6 @@ The following descriptions are only intended to give an overall impression of wh
 
 <p align="right">(<a href="#table-of-contents">back to top</a>)</p>
 
-<br><br>
-
 <!-- Running the code -->
 # Run the code
 
