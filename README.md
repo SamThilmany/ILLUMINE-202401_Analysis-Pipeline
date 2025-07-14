@@ -6,8 +6,9 @@
     </p>
     <p>
         <img src="https://img.shields.io/badge/Submitted:-11.10.2014-blue" alt="Submission: 11.10.2024" />
-        <img src="https://img.shields.io/badge/Revised:-pending-orange" alt="Revided: pending" />
-        <img src="https://img.shields.io/badge/Accepted:-pending-green" alt="Acceptance pending" />
+        <img src="https://img.shields.io/badge/Revised:-03.05.2025-orange" alt="Revision: 03.05.2025" />
+        <img src="https://img.shields.io/badge/Accepted:-08.07.2025-green" alt="Accepted: 08.07.2025" />
+        <img src="https://img.shields.io/badge/Published:-pending-green" alt="Published: 08.07.2025" />
     </p>
 </div>
 
@@ -18,8 +19,6 @@
   * [Overall Project Description](#overall-project-description)
   * [About the Present Experiment](#about-the-present-experiment)
 - [Run the Code](#run-the-code)
-  * [General Remarks on the Repository](#general-remarks-on-the-repository)
-  * [Execute the Code Yourself](#execute-the-code-yourself)
 
 <br><br>
 
@@ -38,7 +37,7 @@ We hope to provide a significant contribution to clarifying the possible influen
 
 ## About the Present Experiment
 
-The following descriptions are only intended to give an overall impression of what this code is used for. For further information, please refer to the published article. *(Note: The article is currently under review. This file will be updated with a link to the article once it is published.)*
+The following descriptions are only intended to give an overall impression of what this code is used for. For further information, please refer to the published article. *(Note: The article got accepted, but is not published yet. This file will be updated with a link to the article once it is published.)*
 
 <p align="right">(<a href="#table-of-contents">back to top</a>)</p>
 
