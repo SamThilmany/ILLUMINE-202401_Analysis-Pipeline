@@ -2,13 +2,13 @@
     <h1>Data Analysis Pipeline</h1>
     <h4>An R pipeline for technical and biological data assessment.</h4>
     <p>
-        <img src="https://img.shields.io/badge/Submitted in:-Proteomics_--_Clinical_Applications-blue" alt="Submitted in Proteomics - Clinical Applications" />
+        <a href="https://doi.org/10.1002/prca.70017" target="_blank"><img src="https://img.shields.io/badge/Published in:-Proteomics_--_Clinical_Applications-blue" alt="Submitted in Proteomics - Clinical Applications" /></a>
     </p>
     <p>
-        <img src="https://img.shields.io/badge/Submitted:-11.10.2014-blue" alt="Submission: 11.10.2024" />
-        <img src="https://img.shields.io/badge/Revised:-03.05.2025-orange" alt="Revision: 03.05.2025" />
+        <img src="https://img.shields.io/badge/Submitted:-11.10.2014-blue" alt="Submitted: 11.10.2024" />
+        <img src="https://img.shields.io/badge/Revised:-12.06.2025-orange" alt="Revision: 12.06.2025" />
         <img src="https://img.shields.io/badge/Accepted:-08.07.2025-green" alt="Accepted: 08.07.2025" />
-        <img src="https://img.shields.io/badge/Published:-pending-green" alt="Published: 08.07.2025" />
+        <img src="https://img.shields.io/badge/Published:-10.09.2025-green" alt="Published: 10.09.2025" />
     </p>
 </div>
 
@@ -37,7 +37,7 @@ We hope to provide a significant contribution to clarifying the possible influen
 
 ## About the Present Experiment
 
-The following descriptions are only intended to give an overall impression of what this code is used for. For further information, please refer to the published article. *(Note: The article got accepted, but is not published yet. This file will be updated with a link to the article once it is published.)*
+The following descriptions are only intended to give an overall impression of what this code is used for. For further information, please refer to [the published article](https://doi.org/10.1002/prca.70017).
 
 <p align="right">(<a href="#table-of-contents">back to top</a>)</p>
 
