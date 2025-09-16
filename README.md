@@ -62,7 +62,7 @@ The following descriptions are only intended to give an overall impression of wh
   - pooling
   - desalting and pre-fractionation at high pH
 
-- Aliquot 2 – label-based quantification (LFQ):
+- Aliquot 2 – label-free quantification (LFQ):
   - lysis
   - reduction
   - alkylation
@@ -76,16 +76,16 @@ The following descriptions are only intended to give an overall impression of wh
   - Institute of Biochemistry at the German Sport University Cologne, Cologne, Germany
   - Q&nbsp;Exactive
   - Top-15 DDA
-  - Full scan: Res: 70,000&nbsp;FWHM (at _m_/_z_ 200); AGC: 3e6, IT: 50&nbsp;ms; _m_/_z_ 375–1500
-  - MS/MS: Res: 35,000&nbsp;FWHM (at _m_/_z_ 200); AGC: 2e5; IT: 250&nbsp;ms; Isolation width: _m_/_z_ 0.7
+  - Full scan: Res: 70,000&nbsp;FWHM (at _m_/_z_&nbsp;200); AGC: 3e6, IT: 50&nbsp;ms; _m_/_z_&nbsp;375–1500
+  - MS/MS: Res: 35,000&nbsp;FWHM (at _m_/_z_&nbsp;200); AGC: 2e5; IT: 250&nbsp;ms; Isolation width: _m_/_z_&nbsp;0.7
   - 0&nbsp;% to 40&nbsp;% ACN in 180&nbsp;min
 
 - LFQ:
   - Leibnitz-Institut für Analytische Wissenschaften—ISAS—e.V., Dortmund, Germany
   - Q&nbsp;Exactive&nbsp;HF
   - Top-15 DDA
-  - Full scan: Res: 60,000&nbsp;FWHM (at _m_/_z_ 200); AGC: 3e6, IT: 120&nbsp;ms; _m_/_z_ 300–1500
-  - MS/MS: Res: 15,000&nbsp;FWHM (at _m_/_z_ 200); AGC: 5e4; IT: 50&nbsp;ms; Isolation width: _m_/_z_ 1.6
+  - Full scan: Res: 60,000&nbsp;FWHM (at _m_/_z_&nbsp;200); AGC: 3e6, IT: 120&nbsp;ms; _m_/_z_&nbsp;300–1500
+  - MS/MS: Res: 15,000&nbsp;FWHM (at _m_/_z_&nbsp;200); AGC: 5e4; IT: 50&nbsp;ms; Isolation width: _m_/_z_&nbsp;1.6
   - 0&nbsp;% to 30&nbsp;% ACN in 120&nbsp;min
 
 <p align="right">(<a href="#table-of-contents">back to top</a>)</p>
