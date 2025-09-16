@@ -5,7 +5,7 @@
         <a href="https://doi.org/10.1002/prca.70017" target="_blank"><img src="https://img.shields.io/badge/Published in:-Proteomics_--_Clinical_Applications-blue" alt="Submitted in Proteomics - Clinical Applications" /></a>
     </p>
     <p>
-        <img src="https://img.shields.io/badge/Submitted:-11.10.2014-blue" alt="Submitted: 11.10.2024" />
+        <img src="https://img.shields.io/badge/Submitted:-11.10.2024-blue" alt="Submitted: 11.10.2024" />
         <img src="https://img.shields.io/badge/Revised:-12.06.2025-orange" alt="Revision: 12.06.2025" />
         <img src="https://img.shields.io/badge/Accepted:-08.07.2025-green" alt="Accepted: 08.07.2025" />
         <img src="https://img.shields.io/badge/Published:-10.09.2025-green" alt="Published: 10.09.2025" />
